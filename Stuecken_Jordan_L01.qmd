@@ -26,7 +26,7 @@ citation-location: margin
 ::: {.callout-tip icon="false"}
 ## Github Repo Link
 
-[Stuecken Github Link](https://github.com/stat301-3-2026-spring/l01-review-jordanstuecken)
+[Stuecken GitHub Repo](https://github.com/stat301-3-2026-spring/l01-review-jordanstuecken)
 :::
 
 ## Overview
@@ -44,7 +44,11 @@ Provide a brief outline/overview of the steps involved in a supervised machine l
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+1. splitting data into training, testing, potential folding
+2. creating recipes
+3. defining workflows (model type, recipe, data, potential tuning parameters)
+4. select best parameters, train testing data
+5. evaluate model on testing dataset
 
 :::
 
@@ -55,7 +59,7 @@ Explain the difference between supervised and unsupervised learning.
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+Supervised learning has a target variable of interest. Unsupervised data doesn't have a specific target variable and instead looks at a full set of unstructured data. The outcome is what supervises the data. For example, performance metrics of predicted data is something that supervises a problem.
 
 :::
 
@@ -68,7 +72,7 @@ In general, we can classify a model by its purpose into 1 of the 3 categories be
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+A descriptive model describes characteristics or relationships within data, such as the geom_smooth() function for data with linear relationships.
 
 :::
 
@@ -77,7 +81,7 @@ YOUR SOLUTION HERE
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+An inferential model tests a hypothesis or question. This model can be used for a problem that wants to test how one variable impacts another, focusing on the relationship between variables in a dataset.
 
 :::
 
@@ -86,7 +90,7 @@ YOUR SOLUTION HERE
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+A predictive model predicts new data points based on existing data and patterns.
 
 :::
 
