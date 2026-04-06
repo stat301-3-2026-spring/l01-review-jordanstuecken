@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jordan Stuecken">
-<meta name="dcterms.date" content="2026-04-01">
+<meta name="dcterms.date" content="2026-04-05">
 
 <title>L01 Jordan Stuecken</title>
 <style>
@@ -2229,7 +2229,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 1, 2026</p>
+      <p class="date">April 5, 2026</p>
     </div>
   </div>
   
@@ -2275,11 +2275,11 @@ vertical-align: -.125em;
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li>splitting data into training, testing, potential folding</li>
-<li>creating recipes</li>
-<li>defining workflows (model type, recipe, data, potential tuning parameters)</li>
-<li>select best parameters, train testing data</li>
-<li>evaluate model on testing dataset</li>
+<li>splitting data into training and testing sets (and potentially creating resamples like v-folds)</li>
+<li>creating recipes to preprocess and transform the data</li>
+<li>defining workflows (model type, recipe, data, and potential tuning parameters)</li>
+<li>tuning/selecting the best parameters using resampling on training data</li>
+<li>fitting the final model on the training data and evaluating performance on the testing data</li>
 </ol>
 </div>
 </div>
@@ -2297,7 +2297,8 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Supervised learning has a target variable of interest. Unsupervised data doesn’t have a specific target variable and instead looks at a full set of unstructured data. The outcome is what supervises the data. For example, performance metrics of predicted data is something that supervises a problem.</p>
+<p>Supervised learning has a target variable of interest that the model is trying to predict. The outcome variable supervises the process by providing a correct answer to compare predictions against.</p>
+<p>Unsupervised learning does not have a specific target variable and instead looks for patterns within a full set of unlabeled data.</p>
 </div>
 </div>
 </section>
@@ -2316,7 +2317,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A descriptive model describes characteristics or relationships within data, such as the geom_smooth() function for data with linear relationships.</p>
+<p>A descriptive model describes characteristics or relationships within data through summaries or visualizations (such as geom_smooth() function). The goal is to understand the general structure and trends in the data.</p>
 </div>
 </div>
 </section>
@@ -2332,7 +2333,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>An inferential model tests a hypothesis or question. This model can be used for a problem that wants to test how one variable impacts another, focusing on the relationship between variables in a dataset.</p>
+<p>An inferential model tests a hypothesis or research question. It is used to understand how one variable impacts another, focusing on estimating relationships between variables in a dataset.</p>
 </div>
 </div>
 </section>
@@ -2348,7 +2349,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A predictive model predicts new data points based on existing data and patterns.</p>
+<p>A predictive model uses patterns in existing data to predict outcomes for unseen data points.</p>
 </div>
 </div>
 </section>
@@ -2369,7 +2370,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>A mechanistic model follows a known parametric equation to relate an outcome with predictors. This model type is usually easier to interpret and requires less data, but has limited complexity and flexibility.</p>
 </div>
 </div>
 </section>
@@ -2386,7 +2387,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>An empirically driven model makes fewer assumptions about the relationship between variables and uses the observed data to learn patterns. While more flexible, this model type can be more prone to overfitting and typically takes more time to run.</p>
 </div>
 </div>
 </section>
@@ -2403,7 +2404,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Parametric models are generally mechanistic, as they assume a specific guiding function. Nonparametric models are generally empirically driven and allow the data to determine the structure of the model.</p>
 </div>
 </div>
 </section>
@@ -2420,7 +2421,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>A mechanistic model is easier to interpret because it follows a known equation and is typically less complex than an empirically driven model that may be harder to interpret.</p>
 </div>
 </div>
 </section>
@@ -2437,7 +2438,8 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Mechanistic models are less flexible because they follow a predefined formula.</p>
+<p>Empirically driven models are more flexible because they allow the data to determine the model.</p>
 </div>
 </div>
 </section>
@@ -2454,7 +2456,8 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Mechanistic models tend to have higher bias and lower variance because they make stronger assumptions about the data.</p>
+<p>Empirically driven models tend to have lower bias but higher variance, as they fit the data more closely and may overfit.</p>
 </div>
 </div>
 </section>
@@ -2472,7 +2475,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Regression problems predict a numerical outcome value based on predictor variables. Classification problems predict the class of the categorical outcome variable along with a confidence level in its prediction.</p>
 </div>
 </div>
 </section>
@@ -2489,7 +2492,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>When splitting data, it is useful to stratify by the outcome/target variable to ensure that each split has a similar distribution of the outcome. This helps ensure that all classes or ranges of the outcome are thoroughly represented, leading to a more accurate model fit.</p>
 </div>
 </div>
 </section>
@@ -2506,7 +2509,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>V-fold cross validation divides the data into V folds and uses V-1 as training data with the remaining fold as the test set, and then repeats the process so that each fold serves as the test set once. The process is then repeated a specified number of times. RMSE is calculated for each fold, and the average RMSE across all folds and repeats is used as an estimate of test error. We use this process to get a more reliable estimate of model performance while reducing dependence on a single train/test split to lower the risk of overfitting.</p>
 </div>
 </div>
 </section>
@@ -2523,7 +2526,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Bootstrap resampling may be preferred over v-fold to estimate test RMSE when working with a smaller dataset where splitting the data into several folds may not allow for sufficient data to train a model. Bootstrapping allows for repeated sampling with replacement to make use of more of the available data.</p>
 </div>
 </div>
 </section>
@@ -2540,7 +2543,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Model tuning estimates model performance on a specified range and number of hyperparameters for each model type. This process allows the optimal parameters for a model to be identified, as well as compare performance across models with best parameters selected.</p>
 </div>
 </div>
 </section>
@@ -2557,7 +2560,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>RMSE, MAE</p>
 </div>
 </div>
 <p>What are two common performance metrics when dealing with a classification ML problem?</p>
@@ -2571,14 +2574,14 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Accuracy, ROC AUC</p>
 </div>
 </div>
 </section>
 <section id="question-11" class="level3">
 <h3 class="anchored" data-anchor-id="question-11">Question 11</h3>
 <p>Classify each question/problem below as either prediction or inferential. Explain your reasoning for each.</p>
-<p>A company with a subscription based service (for example Netflix, Disney+, New York Times, etc) has data concerning customer interactions with a them, including features like the number of customer service calls, quality of service calls, subscription length, engagement with the service, discounted service, etc. They are interested in two questions:</p>
+<p>A company with a subscription based service (for example Netflix, Disney+, New York Times, etc) has data concerning customer interactions with them, including features like the number of customer service calls, quality of service calls, subscription length, engagement with the service, discounted service, etc. They are interested in two questions:</p>
 <ol type="1">
 <li>Does a high number of service calls impact a customer’s likelihood of churn in the next month (leave the company/drop the service)?</li>
 </ol>
@@ -2592,7 +2595,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Inferential: This question asks if there exists a relationship between number of service calls and likelihood of churn. Inferential models such as this example answer a research question about how variables in a dataset relate to eachother.</p>
 </div>
 </div>
 <ol start="2" type="1">
@@ -2608,7 +2611,7 @@ vertical-align: -.125em;
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>YOUR SOLUTION HERE</p>
+<p>Predictive: this question asks for a specific estimate of a customer’s likelihood to churn based on predictor variables. This is a classification problem, where customers are classified into churn or non-churn with associated probabilities.</p>
 </div>
 </div>
 </section>

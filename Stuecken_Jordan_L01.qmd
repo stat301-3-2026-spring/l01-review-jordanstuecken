@@ -44,11 +44,11 @@ Provide a brief outline/overview of the steps involved in a supervised machine l
 ::: {.callout-tip icon="false"}
 ## Solution
 
-1. splitting data into training, testing, potential folding
-2. creating recipes
-3. defining workflows (model type, recipe, data, potential tuning parameters)
-4. select best parameters, train testing data
-5. evaluate model on testing dataset
+1. splitting data into training and testing sets (and potentially creating resamples like v-folds)
+2. creating recipes to preprocess and transform the data
+3. defining workflows (model type, recipe, data, and potential tuning parameters)
+4. tuning/selecting the best parameters using resampling on training data
+5. fitting the final model on the training data and evaluating performance on the testing data
 
 :::
 
@@ -59,7 +59,9 @@ Explain the difference between supervised and unsupervised learning.
 ::: {.callout-tip icon="false"}
 ## Solution
 
-Supervised learning has a target variable of interest. Unsupervised data doesn't have a specific target variable and instead looks at a full set of unstructured data. The outcome is what supervises the data. For example, performance metrics of predicted data is something that supervises a problem.
+Supervised learning has a target variable of interest that the model is trying to predict. The outcome variable supervises the process by providing a correct answer to compare predictions against.
+
+Unsupervised learning does not have a specific target variable and instead looks for patterns within a full set of unlabeled data.
 
 :::
 
@@ -72,7 +74,7 @@ In general, we can classify a model by its purpose into 1 of the 3 categories be
 ::: {.callout-tip icon="false"}
 ## Solution
 
-A descriptive model describes characteristics or relationships within data, such as the geom_smooth() function for data with linear relationships.
+A descriptive model describes characteristics or relationships within data through summaries or visualizations (such as geom_smooth() function). The goal is to understand the general structure and trends in the data.
 
 :::
 
@@ -81,7 +83,7 @@ A descriptive model describes characteristics or relationships within data, such
 ::: {.callout-tip icon="false"}
 ## Solution
 
-An inferential model tests a hypothesis or question. This model can be used for a problem that wants to test how one variable impacts another, focusing on the relationship between variables in a dataset.
+An inferential model tests a hypothesis or research question. It is used to understand how one variable impacts another, focusing on estimating relationships between variables in a dataset.
 
 :::
 
@@ -90,7 +92,7 @@ An inferential model tests a hypothesis or question. This model can be used for 
 ::: {.callout-tip icon="false"}
 ## Solution
 
-A predictive model predicts new data points based on existing data and patterns.
+A predictive model uses patterns in existing data to predict outcomes for unseen data points.
 
 :::
 
@@ -105,7 +107,7 @@ What does it mean to be a mechanistic model?
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+A mechanistic model follows a known parametric equation to relate an outcome with predictors. This model type is usually easier to interpret and requires less data, but has limited complexity and flexibility.
 
 :::
 
@@ -116,7 +118,7 @@ What does it mean to be an empirically driven model?
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+An empirically driven model makes fewer assumptions about the relationship between variables and uses the observed data to learn patterns. While more flexible, this model type can be more prone to overfitting and typically takes more time to run.
 
 :::
 
@@ -127,7 +129,7 @@ How does the mechanistic and empirically driven model terminology relate to the 
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+Parametric models are generally mechanistic, as they assume a specific guiding function. Nonparametric models are generally empirically driven and allow the data to determine the structure of the model.
 
 :::
 
@@ -138,7 +140,7 @@ In general, is a mechanistic or empirically driven model easier to interpret? Ex
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+A mechanistic model is easier to interpret because it follows a known equation and is typically less complex than an empirically driven model that may be harder to interpret.
 
 :::
 
@@ -146,10 +148,13 @@ YOUR SOLUTION HERE
 
 How does mechanistic and empirically driven model terminology relate to the idea of model flexibility? That is, which would be more or less flexible than the other.
 
+
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+Mechanistic models are less flexible because they follow a predefined formula.
+
+Empirically driven models are more flexible because they allow the data to determine the model.
 
 :::
 
@@ -160,7 +165,9 @@ Describe the bias-variance trade-off when considering the use of a mechanistic o
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+Mechanistic models tend to have higher bias and lower variance because they make stronger assumptions about the data.
+
+Empirically driven models tend to have lower bias but higher variance, as they fit the data more closely and may overfit.
 
 :::
 
@@ -171,7 +178,7 @@ Explain the difference between a regression and classification machine learning 
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+Regression problems predict a numerical outcome value based on predictor variables. Classification problems predict the class of the categorical outcome variable along with a confidence level in its prediction.
 
 :::
 
@@ -182,8 +189,7 @@ When splitting the data, why is it useful to stratify by the outcome/target vari
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
-
+When splitting data, it is useful to stratify by the outcome/target variable to ensure that each split has a similar distribution of the outcome. This helps ensure that all classes or ranges of the outcome are thoroughly represented, leading to a more accurate model fit.
 :::
 
 ### Question 7 
@@ -193,7 +199,7 @@ Briefly describe how v-fold cross validation with repeats is used to estimate te
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+V-fold cross validation divides the data into V folds and uses V-1 as training data with the remaining fold as the test set, and then repeats the process so that each fold serves as the test set once. The process is then repeated a specified number of times. RMSE is calculated for each fold, and the average RMSE across all folds and repeats is used as an estimate of test error. We use this process to get a more reliable estimate of model performance while reducing dependence on a single train/test split to lower the risk of overfitting.
 
 :::
 
@@ -204,7 +210,7 @@ When might we use a bootstrap resampling procedure instead of v-fold cross valid
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+Bootstrap resampling may be preferred over v-fold to estimate test RMSE when working with a smaller dataset where splitting the data into several folds may not allow for sufficient data to train a model. Bootstrapping allows for repeated sampling with replacement to make use of more of the available data.
 
 :::
 
@@ -215,7 +221,7 @@ Briefly describe model tuning and why we use it.
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+Model tuning estimates model performance on a specified range and number of hyperparameters for each model type. This process allows the optimal parameters for a model to be identified, as well as compare performance across models with best parameters selected.
 
 :::
 
@@ -226,7 +232,7 @@ What are two common performance metrics when dealing with a regression ML proble
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+RMSE, MAE
 
 :::
 
@@ -235,7 +241,7 @@ What are two common performance metrics when dealing with a classification ML pr
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+Accuracy, ROC AUC
 
 :::
 
@@ -243,14 +249,14 @@ YOUR SOLUTION HERE
 
 Classify each question/problem below as either prediction or inferential. Explain your reasoning for each.
 
-A company with a subscription based service (for example Netflix, Disney+, New York Times, etc) has data concerning customer interactions with a them, including features like the number of customer service calls, quality of service calls, subscription length, engagement with the service, discounted service, etc. They are interested in two questions:
+A company with a subscription based service (for example Netflix, Disney+, New York Times, etc) has data concerning customer interactions with them, including features like the number of customer service calls, quality of service calls, subscription length, engagement with the service, discounted service, etc. They are interested in two questions:
 
 1. Does a high number of service calls impact a customer's likelihood of churn in the next month (leave the company/drop the service)?
 
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+Inferential: This question asks if there exists a relationship between number of service calls and likelihood of churn. Inferential models such as this example answer a research question about how variables in a dataset relate to eachother.
 
 :::
 
@@ -259,7 +265,7 @@ YOUR SOLUTION HERE
 ::: {.callout-tip icon="false"}
 ## Solution
 
-YOUR SOLUTION HERE
+Predictive: this question asks for a specific estimate of a customer's likelihood to churn based on predictor variables. This is a classification problem, where customers are classified into churn or non-churn with associated probabilities.
 
 :::
 
