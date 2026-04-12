@@ -1,0 +1,533 @@
+---
+title: "Self Evaluation L01 Review"
+subtitle: |
+  | Data Science 2 with R 
+  | STAT 301-2
+author: "YOUR NAME"
+pagetitle: "Self Evaluation PQ2 YOUR NAME"
+date: today
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 4
+    toc-location: left
+    embed-resources: true
+    code-fold: false
+    link-external-newwindow: true
+
+execute:
+  warning: false
+  error: true
+
+from: markdown+emoji
+reference-location: margin
+citation-location: margin 
+---
+
+::: {.callout-tip icon="false"}
+## Github Repo Link
+
+[Stuecken GitHub Repo](https://github.com/stat301-3-2026-spring/l01-review-jordanstuecken)
+:::
+
+## Overview
+
+The goal of this lab is to review machine learning/predictive modeling vocabulary and concepts covered in Data Science 2 with R (STAT 301-2).
+
+## Questions
+
+When completing the following questions ensure your solutions are neatly formatted and clearly indicated. Consider including diagrams/images in some of your solutions, if it helps to make things easier to describe/discuss.
+
+### Question 1
+
+Provide a brief outline/overview of the steps involved in a supervised machine learning process. Could provide this as a bulleted list.
+
+::: {.callout-tip icon="false"}
+## Solution
+
+1.  splitting data into training and testing sets (and potentially creating resamples like v-folds)
+2.  creating recipes to preprocess and transform the data
+3.  defining workflows (model type, recipe, data, and potential tuning parameters)
+4.  tuning/selecting the best parameters using resampling on training data
+5.  fitting the final model on the training data and evaluating performance on the testing data
+:::
+
+### Self Evaluation
+
+::: {.callout-important icon="false"}
+## Score: 4
+
+## Explanation
+
+I gave myself a 4 because I believe that my answer included all of the detailed steps with only minor errors for the machine learning process. I left out the initial steps of data collection and preparation and started at splitting, as I was focused on what steps are unique to model building rather than data exploration processes in general.
+
+## Updated solution
+
+*Only required if a 3 or less is scored on the question.*
+:::
+
+### Question 2
+
+Explain the difference between supervised and unsupervised learning.
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Supervised learning has a target variable of interest that the model is trying to predict. The outcome variable supervises the process by providing a correct answer to compare predictions against.
+
+Unsupervised learning does not have a specific target variable and instead looks for patterns within a full set of unlabeled data.
+:::
+
+### Self Evaluation
+
+::: {.callout-important icon="false"}
+## Score: 5
+
+## Explanation
+
+I gave myself a score of 5 for this problem because my answer covers all of the key parts of the solution.
+
+## Updated solution
+
+*Only required if a 3 or less is scored on the question.*
+:::
+
+### Question 3
+
+In general, we can classify a model by its purpose into 1 of the 3 categories below. Provide a brief description of the goals of these model classes.
+
+#### Descriptive Models
+
+::: {.callout-tip icon="false"}
+## Solution
+
+A descriptive model describes characteristics or relationships within data through summaries or visualizations (such as geom_smooth() function). The goal is to understand the general structure and trends in the data.
+:::
+
+### Self Evaluation
+
+::: {.callout-important icon="false"}
+## Score: 5
+
+## Explanation
+
+I gave myself a score of 5 for this problem because my answer covers all of the key parts of the solution.
+
+## Updated solution
+
+*Only required if a 3 or less is scored on the question.*
+:::
+
+#### Inferential Models
+
+::: {.callout-tip icon="false"}
+## Solution
+
+An inferential model tests a hypothesis or research question. It is used to understand how one variable impacts another, focusing on estimating relationships between variables in a dataset.
+:::
+
+### Self Evaluation
+
+::: {.callout-important icon="false"}
+## Score: 4
+
+## Explanation
+
+I gave myself a score of 4 because my answer includes most key parts of the solution, except I did not explicitly state that an inferential model depends on underlying assumptions.
+
+## Updated solution
+
+*Only required if a 3 or less is scored on the question.*
+:::
+
+#### Predictive Models
+
+::: {.callout-tip icon="false"}
+## Solution
+
+A predictive model uses patterns in existing data to predict outcomes for unseen data points.
+:::
+
+### Self Evaluation
+
+::: {.callout-important icon="false"}
+## Score: 5
+
+## Explanation
+
+I gave myself a score of 5 for this problem because my answer covers all of the key parts of the solution.
+
+## Updated solution
+
+*Only required if a 3 or less is scored on the question.*
+:::
+
+### Question 4
+
+We can further describe/classify predictive models by how they were derived or developed as being either mechanistic or empirically driven.
+
+#### Part (a)
+
+What does it mean to be a mechanistic model?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+A mechanistic model follows a known parametric equation to relate an outcome with predictors. This model type is usually easier to interpret and requires less data, but has limited complexity and flexibility.
+:::
+
+### Self Evaluation
+
+::: {.callout-important icon="false"}
+## Score: 5
+
+## Explanation
+
+I gave myself a score of 5 for this problem because my answer covers all of the key parts of the solution.
+
+## Updated solution
+
+*Only required if a 3 or less is scored on the question.*
+:::
+
+#### Part (b)
+
+What does it mean to be an empirically driven model?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+An empirically driven model makes fewer assumptions about the relationship between variables and uses the observed data to learn patterns. While more flexible, this model type can be more prone to overfitting and typically takes more time to run.
+:::
+
+### Self Evaluation
+
+::: {.callout-important icon="false"}
+## Score: 5
+
+## Explanation
+
+Although my answer is a bit more concise than the solution, I believe I answered all key parts by specifying the lack of assumptions, reliance on patterns, flexibility, and longer computation time of empirically driven models.
+
+## Updated solution
+
+*Only required if a 3 or less is scored on the question.*
+:::
+
+#### Part (c)
+
+How does the mechanistic and empirically driven model terminology relate to the parametric and nonparametric model terminology?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Parametric models are generally mechanistic, as they assume a specific guiding function. Nonparametric models are generally empirically driven and allow the data to determine the structure of the model.
+:::
+
+### Self Evaluation
+
+::: {.callout-important icon="false"}
+## Score: 5
+
+## Explanation
+
+I correctly stated the connection between the two sets of terminologies.
+
+## Updated solution
+
+*Only required if a 3 or less is scored on the question.*
+:::
+
+#### Part (d)
+
+In general, is a mechanistic or empirically driven model easier to interpret? Explain.
+
+::: {.callout-tip icon="false"}
+## Solution
+
+A mechanistic model is easier to interpret because it follows a known equation and is typically less complex than an empirically driven model that may be harder to interpret.
+:::
+
+### Self Evaluation
+
+::: {.callout-important icon="false"}
+## Score: 4
+
+## Explanation
+
+I gave myself a 4 because I correctly stated why a mechanistic model is easier to interpret, but I could have added a bit more detail on why the known vs. unknown equation models drive this interpretability.
+
+## Updated solution
+
+*Only required if a 3 or less is scored on the question.*
+:::
+
+#### Part (e)
+
+How does mechanistic and empirically driven model terminology relate to the idea of model flexibility? That is, which would be more or less flexible than the other.
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Mechanistic models are less flexible because they follow a predefined formula.
+
+Empirically driven models are more flexible because they allow the data to determine the model.
+:::
+
+### Self Evaluation
+
+::: {.callout-important icon="false"}
+## Score: 5
+
+## Explanation
+
+I gave myself a score of 5 for this problem because my answer covers all of the key parts of the solution.
+
+## Updated solution
+
+*Only required if a 3 or less is scored on the question.*
+:::
+
+#### Part (f)
+
+Describe the bias-variance trade-off when considering the use of a mechanistic or empirically driven model.
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Mechanistic models tend to have higher bias and lower variance because they make stronger assumptions about the data.
+
+Empirically driven models tend to have lower bias but higher variance, as they fit the data more closely and may overfit.
+:::
+
+### Self Evaluation
+
+::: {.callout-important icon="false"}
+## Score: 5
+
+## Explanation
+
+I didn't provide the "frame" example but I still correctly answered the direct question about the bias-variance trade-off between models as described in the solution.
+
+## Updated solution
+
+*Only required if a 3 or less is scored on the question.*
+:::
+
+### Question 5
+
+Explain the difference between a regression and classification machine learning (ML) problems.
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Regression problems predict a numerical outcome value based on predictor variables. Classification problems predict the class of the categorical outcome variable along with a confidence level in its prediction.
+:::
+
+### Self Evaluation
+
+::: {.callout-important icon="false"}
+## Score: 5
+
+## Explanation
+
+I gave myself a score of 5 for this problem because my answer covers all of the key parts of the solution.
+
+## Updated solution
+
+*Only required if a 3 or less is scored on the question.*
+:::
+
+### Question 6
+
+When splitting the data, why is it useful to stratify by the outcome/target variable?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+When splitting data, it is useful to stratify by the outcome/target variable to ensure that each split has a similar distribution of the outcome. This helps ensure that all classes or ranges of the outcome are thoroughly represented, leading to a more accurate model fit.
+:::
+
+### Self Evaluation
+
+::: {.callout-important icon="false"}
+## Score: 4
+
+## Explanation
+
+I correctly explained the general reason for stratifying by outcome variable, but I could have included description of under/overfitting as the solution does.
+
+## Updated solution
+
+*Only required if a 3 or less is scored on the question.*
+:::
+
+### Question 7
+
+Briefly describe how v-fold cross validation with repeats is used to estimate test RMSE. Also provide an explanation of why we use it.
+
+::: {.callout-tip icon="false"}
+## Solution
+
+V-fold cross validation divides the data into V folds and uses V-1 as training data with the remaining fold as the test set, and then repeats the process so that each fold serves as the test set once. The process is then repeated a specified number of times. RMSE is calculated for each fold, and the average RMSE across all folds and repeats is used as an estimate of test error. We use this process to get a more reliable estimate of model performance while reducing dependence on a single train/test split to lower the risk of overfitting.
+:::
+
+### Self Evaluation
+
+::: {.callout-important icon="false"}
+## Score: 4
+
+## Explanation
+
+I correctly explained the process of v-fold cross validation with repeats. I could have elaborated more on WHY we use this process, as my answer is a bit shorter than the solution but has the same conceptual idea.
+
+## Updated solution
+
+*Only required if a 3 or less is scored on the question.*
+:::
+
+### Question 8
+
+When might we use a bootstrap resampling procedure instead of v-fold cross validation to estimate test RMSE?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Bootstrap resampling may be preferred over v-fold to estimate test RMSE when working with a smaller dataset where splitting the data into several folds may not allow for sufficient data to train a model. Bootstrapping allows for repeated sampling with replacement to make use of more of the available data.
+:::
+
+### Self Evaluation
+
+::: {.callout-important icon="false"}
+## Score: 3
+
+## Explanation
+
+I identified the reason of having a smaller dataset but missed the low variance benefit of bootstrap resampling.
+
+## Updated solution
+
+Bootstrap resampling may be preferred over v-fold to estimate test RMSE when working with a smaller dataset where splitting the data into several folds may not allow for sufficient data to train a model. Bootstrapping allows for repeated sampling with replacement to make use of more of the available data. Bootstrap resampling is also preferred when aiming for a low variance for RMSE estimates, as this process can run many more samples than the v-folding process does.
+:::
+
+### Question 9
+
+Briefly describe model tuning and why we use it.
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Model tuning estimates model performance on a specified range and number of hyperparameters for each model type. This process allows the optimal parameters for a model to be identified, as well as compare performance across models with best parameters selected.
+:::
+
+### Self Evaluation
+
+::: {.callout-important icon="false"}
+## Score: 3
+
+## Explanation
+
+I explained the model tuning process and why we use it, but I could have elaborated more on what hyperparameters are.
+
+## Updated solution
+
+Hyperparameters are user-specified inputs for models, and different models have different types of parameters. Each new hyperparameter essential creates a new model, and we can tune these values to create a model that performs best. Model tuning estimates model performance on a specified range and number of hyperparameters for each model type. This process allows the optimal parameters for a model to be identified, as well as compare performance across models with best parameters selected.
+:::
+
+### Question 10
+
+What are two common performance metrics when dealing with a regression ML problem?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+RMSE, MAE
+:::
+
+### Self Evaluation
+
+::: {.callout-important icon="false"}
+## Score: 5
+
+## Explanation
+
+Correctly identified two performance metrics.
+
+## Updated solution
+
+*Only required if a 3 or less is scored on the question.*
+:::
+
+What are two common performance metrics when dealing with a classification ML problem?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Accuracy, ROC AUC
+:::
+
+### Self Evaluation
+
+::: {.callout-important icon="false"}
+## Score: 5
+
+## Explanation
+
+Correctly identified two performance metrics.
+
+## Updated solution
+
+*Only required if a 3 or less is scored on the question.*
+:::
+
+### Question 11
+
+Classify each question/problem below as either prediction or inferential. Explain your reasoning for each.
+
+A company with a subscription based service (for example Netflix, Disney+, New York Times, etc) has data concerning customer interactions with them, including features like the number of customer service calls, quality of service calls, subscription length, engagement with the service, discounted service, etc. They are interested in two questions:
+
+1.  Does a high number of service calls impact a customer's likelihood of churn in the next month (leave the company/drop the service)?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Inferential: This question asks if there exists a relationship between number of service calls and likelihood of churn. Inferential models such as this example answer a research question about how variables in a dataset relate to eachother.
+:::
+
+### Self Evaluation
+
+::: {.callout-important icon="false"}
+## Score: 5
+
+## Explanation
+
+I correctly identified the problem type and explained why this question is inferential.
+
+## Updated solution
+
+*Only required if a 3 or less is scored on the question.*
+:::
+
+2.  How likely is it that a customer will churn in the next month (leave the company/drop the service)?
+
+::: {.callout-tip icon="false"}
+## Solution
+
+Predictive: this question asks for a specific estimate of a customer's likelihood to churn based on predictor variables. This is a classification problem, where customers are classified into churn or non-churn with associated probabilities.
+:::
+
+### Self Evaluation
+
+::: {.callout-important icon="false"}
+## Score: 5
+
+## Explanation
+
+I correctly identified the problem type and identified that it is trying to classify the outcome variable rather than understand the cause.
+
+## Updated solution
+
+*Only required if a 3 or less is scored on the question.*
+:::
